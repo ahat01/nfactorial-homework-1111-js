@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+ 
+<body>
+    <input type="button" id="btn" value="click"/>
+
+    <div id="text">Remove me</div>
+
+    <button class="remove-button">[x]</button>
+      <style>
+body {
+  margin: 10px auto;
+  width: 470px;
+}
+
+h3 {
+  margin: 0;
+  padding-bottom: .3em;
+  padding-right: 20px;
+  font-size: 1.1em;
+}
+
+p {
+  margin: 0;
+  padding: 0 0 .5em;
+}
+
+.pane {
+  background: #edf5e1;
+  padding: 10px 20px 10px;
+  border-top: solid 2px #c4df9b;
+  position: relative;
+}
+
+.remove-button {
+  position: absolute;
+  font-size: 110%;
+  top: 0;
+  color: darkred;
+  right: 10px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+      </style>
+        <div>
+          <div class="pane" id="p1">
+            <h3>Лошадь</h3>
+            <p>Домашняя лошадь — животное семейства непарнокопытных, одомашненный и единственный сохранившийся подвид дикой лошади, вымершей в дикой природе, за исключением небольшой популяции лошади Пржевальского.</p>
+            <button class="remove-button" id="b1">[x]</button>
+        </div>
+          <div class="pane" id="p2">
+            <h3>Осёл</h3>
+            <p>Домашний осёл (лат. Equus asinus asinus), или ишак, — одомашненный подвид дикого осла (Equus asinus), сыгравший важную историческую роль в развитии хозяйства и культуры человека и по-прежнему широко в хозяйстве многих развивающихся стран.</p>
+            <button class="remove-button" id="b2">[x]</button>  
+        </div>
+          <div class="pane" id="p3">
+            <h3>Кошка</h3>
+            <p>Кошка, или домашняя кошка (лат. Felis silvestris catus), — домашнее животное, одно из наиболее популярных(наряду с собакой) «животных-компаньонов». Являясь одиночным охотником на грызунов и других мелких животных, кошка — социальное животное, использующее для общения широкий диапазон звуковых сигналов.</p>
+            <button class="remove-button" id="b3">[x]</button> 
+        </div>
+
+        </div>
+      
+    <script>
+     var input = document.getElementById('text');
+        var btn = document.getElementById('btn');
+        btn.onclick = function() {
+        input.hidden = true;
+    }
+
+    button.addEventListener("click", () => alert("1"));//ассихронно
+    button.removeEventListener("click", () => alert("1"));
+    button.onclick = () => alert(2);
+
+
+   const btn1= document.getElementById('b1');
+   const btn2= document.getElementById('b2');
+   const btn3= document.getElementById('b3');
+
+   const p1=document.getElementById('p1');
+
+   const p2=document.getElementById('p2');
+
+   const p3=document.getElementById('p3');
+
+   btn1.onclick=function(){
+    p1.hidden=true;
+   }
+
+
+    </script>
+
+    
+</body>
+</html>
